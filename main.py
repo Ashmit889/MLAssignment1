@@ -73,8 +73,8 @@ def plot_data(alpha, iterations, method='batch', batch_size=1):
     )
 
     # Plot cost history
-    plt.figure(figsize=(10, 6))
-    plt.plot(range(1, iterations + 1), cost_history, color='purple', linewidth=2)
+    plt.figure(figsize=(12, 8))  # Changed size
+    plt.plot(range(1, iterations + 1), cost_history, color='green', linewidth=2)  # Changed color
     plt.xlabel('Iterations', fontsize=14)
     plt.ylabel('Cost', fontsize=14)
     plt.title(f'Cost vs. Iterations (α={alpha}, method={method})', fontsize=16)
@@ -85,9 +85,9 @@ def plot_data(alpha, iterations, method='batch', batch_size=1):
     plt.close()
 
     # Plot regression line
-    plt.figure(figsize=(10, 6))
+    plt.figure(figsize=(12, 8))  # Changed size
     plt.scatter(X, Y, color='blue', label='Data points', alpha=0.6, edgecolors='w', s=100)
-    plt.plot(X, predict(X, theta_0, theta_1), color='red', linewidth=2, label='Regression line')
+    plt.plot(X, predict(X, theta_0, theta_1), color='orange', linewidth=2, label='Regression line')  # Changed color
     plt.xlabel('X', fontsize=14)
     plt.ylabel('y', fontsize=14)
     plt.title(f'Linear Regression (α={alpha}, method={method})', fontsize=16)
